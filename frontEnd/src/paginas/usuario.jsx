@@ -21,36 +21,42 @@ const Usuario = () => {
   };
 
   return (
-    <div>
-      <form>
-        <fieldset class="inicio">
-        <legend>
-        <h2>Iniciar Sesión</h2>
-        <label>Nombre</label>
-        <input
-          class="input1"
-          type="text"
-          value={loginData.nombre}
-          onChange={(e) => setLoginData({ ...loginData, nombre: e.target.value })}
-          placeholder="nombre"
-        />
-        <label class="con">Contraseña</label>
-        <input
-          class="input2"
-          type="password"
-          value={loginData.contraseña}
-          onChange={(e) => setLoginData({ ...loginData, contraseña: e.target.value })}
-          placeholder="contraseña"
-        />
-        <button className="sesionBttn" onClick={handleLogin}>
-          Iniciar Sesión
-        </button>
-        </legend>
+    <div className="form-container">
+      <form className="inicio">
+        <fieldset>
+          <legend className="legend-container">
+            <h2>Iniciar Sesión</h2>
+          </legend>
+          <label>Nombre</label>
+          <input
+            className="input1"
+            type="text"
+            value={loginData.nombre}
+            onChange={(e) => setLoginData({ ...loginData, nombre: e.target.value })}
+            placeholder="Nombre"
+          />
+          <label>Contraseña</label>
+          <input
+            className="input2"
+            type="password"
+            value={loginData.contraseña}
+            onChange={(e) => setLoginData({ ...loginData, contraseña: e.target.value })}
+            placeholder="Contraseña"
+          />
+          <div className="button-container">
+            <button className="sesionBttn" onClick={handleLogin}>
+              Iniciar Sesión
+            </button>
+          </div>
         </fieldset>
       </form>
 
-      <h2 class="nuevaCuenta">¿No tienes una cuenta? Regístrate aquí:</h2>
-      <button onClick={() => setRegistroVisible(true)} class="nueva">Registrar Usuario</button>
+      <h2 className="nuevaCuenta">¿No tienes una cuenta? Regístrate aquí:</h2>
+      <div className="button-container">
+        <button onClick={() => setRegistroVisible(true)} className="nueva">
+          Registrar Usuario
+        </button>
+      </div>
 
       {registroVisible && <Registrar onRegistroExitoso={handleRegistroExitoso} />}
     </div>

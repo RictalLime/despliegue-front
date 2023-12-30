@@ -1,88 +1,44 @@
-.registrarBttn {
-    width: 20%;
-    padding: 12px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    position: absolute;
-    bottom:12%;
-}
-  
-.registrarBttn:hover {
-    background-color: #2980b9;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.sesionBttn {
-    width: 20%;
-    padding: 12px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    position: absolute;
-    top: 37%;
-}
-  
-.sesionBttn:hover {
-    background-color: #2980b9;
+.registrarBttn,
+.sesionBttn,
+.nueva {
+  width: 50%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.nueva{
-    background-color: #47F747;
-    border-radius: 1px;
-    height: 3%;
-    border: none;
-    box-shadow: 3px 3px 10px black;
-    position: absolute;
-    left: 10%;
+.registrarBttn:hover,
+.sesionBttn:hover,
+.nueva:hover {
+  background-color: #3498db;
 }
 
-.nueva:hover{
-    background-color: #2FC82F;
+.registrar {
+  width: 50%;
+  margin-bottom: 20px;
 }
 
-fieldset{
-    padding: 4%;
+.inicio {
+  width: 50%;
 }
 
-.con{
-    position: absolute;
-    bottom: 67%;
-    left: 4%;
+.legend-container {
+  text-align: center;
 }
 
-.input1{
-    position: absolute;
-    bottom: 72%;
-    left: 10%;
-}
-
-.input2{
-    position: absolute;
-    bottom: 67%;
-    left: 10%;
-}
-
-.con2{
-    position: absolute;
-    bottom: 22%;
-    left: 4%;
-}
-
-
-.input3{
-    position: absolute;
-    bottom: 28%;
-    left: 10%;
-}
-
-.input4{
-    position: absolute;
-    bottom: 22%;
-    left: 10%;
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }

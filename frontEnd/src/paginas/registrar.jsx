@@ -16,31 +16,31 @@ const Registrar = ({ onRegistroExitoso }) => {
   };
 
   return (
-    <div>
-      <form>
-        <fieldset class="registrar">
-        <legend>
-        <h2>Registro de Nuevo Usuario</h2>
-        <label>Nombre</label>
-        <input
-          class="input3"
-          type="text"
-          value={registroData.nombre}
-          onChange={(e) => setRegistroData({ ...registroData, nombre: e.target.value })}
-          placeholder="nombre"
-        />
-        <label class="con2">Contraseña</label>
-        <input
-          class="input4"
-          type="password"
-          value={registroData.contraseña}
-          onChange={(e) => setRegistroData({ ...registroData, contraseña: e.target.value })}
-          placeholder="contraseña"
+    <div className="form-container">
+      <form className="registrar">
+        <fieldset>
+          <legend className="legend-container">
+            <h2>Registro de Nuevo Usuario</h2>
+          </legend>
+          <label>Nombre</label>
+          <input
+            className="input3"
+            type="text"
+            value={registroData.nombre}
+            onChange={(e) => setRegistroData({ ...registroData, nombre: e.target.value })}
+            placeholder="Nombre"
           />
-        <button className="registrarBttn" onClick={handleRegistro}>
-          Registrar Usuario
-        </button>
-        </legend>
+          <label>Contraseña</label>
+          <input
+            className="input4"
+            type="password"
+            value={registroData.contraseña}
+            onChange={(e) => setRegistroData({ ...registroData, contraseña: e.target.value })}
+            placeholder="Contraseña"
+          />
+          <button className="registrarBttn" onClick={handleRegistro}>
+            Registrar Usuario
+          </button>
         </fieldset>
       </form>
     </div>
