@@ -39,7 +39,7 @@ const Registrar = ({ onRegistroExitoso }) => {
             placeholder="Contraseña"
           />
           <button className="registrarBttn" onClick={handleRegistro}>
-            Registrar Usuario
+            Registrar
           </button>
         </fieldset>
       </form>
