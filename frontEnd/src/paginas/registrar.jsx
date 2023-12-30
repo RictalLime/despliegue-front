@@ -7,7 +7,7 @@ const Registrar = ({ onRegistroExitoso }) => {
 
   const handleRegistro = async () => {
     try {
-      const response = await axios.post("http://localhost:4567/registro", registroData);
+      const response = await axios.post("https://despliegue-back-production.up.railway.app/registro", registroData);
       console.log(response.data);
       onRegistroExitoso();
     } catch (error) {
